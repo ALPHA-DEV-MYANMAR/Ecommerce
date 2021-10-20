@@ -45,5 +45,6 @@
                 </x-jet-button>
             </div>
         </form>
+        <a href="{{ route('register') }}">Register</a>
     </x-jet-authentication-card>
 </x-guest-layout>

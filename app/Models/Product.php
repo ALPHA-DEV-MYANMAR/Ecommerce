@@ -17,4 +17,8 @@ class Product extends Model
         'gallery',
     ];
 
+    public function item(){
+        $this->belongsTo('App/Model/Product','user_id');
+    }
+
 }

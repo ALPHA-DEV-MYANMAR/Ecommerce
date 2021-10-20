@@ -22,7 +22,9 @@
                                     
                                     <i class="fas fa-shopping-cart " id="cart_icon"></i>
                                     <span class="badge bg-danger rounded-circle">
-                                        
+                                        <div>
+                                            <livewire:cart-count />
+                                        </div>
                                     </span>
                                 </x-jet-nav-link>
                             </div>

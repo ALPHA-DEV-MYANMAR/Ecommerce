@@ -1,5 +1,12 @@
 <div class="container">
-
+    <div>
+        @if (session()->has('message'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ session('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+    </div>
     <div class="card">
         <div class="row">
             <div class="col-sm-6">
