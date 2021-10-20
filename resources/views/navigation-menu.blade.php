@@ -18,6 +18,13 @@
                                 <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                                     {{ __('Ecommerce') }}
                                 </x-jet-nav-link>
+                                <x-jet-nav-link href="{{ route('addtocartview') }}" :active="request()->routeIs('addtocartview')">
+                                    
+                                    <i class="fas fa-shopping-cart " id="cart_icon"></i>
+                                    <span class="badge bg-danger rounded-circle">
+                                        
+                                    </span>
+                                </x-jet-nav-link>
                             </div>
                         </div>
             
@@ -39,6 +46,7 @@
                                         </x-slot>
             
                                         <x-slot name="content">
+
                                             <div class="w-60">
                                                 <!-- Team Management -->
                                                 <div class="block px-4 py-2 text-xs text-gray-400">
@@ -222,3 +230,8 @@
     </div>
 </div>
 
+<style>
+    #cart_icon{
+    font-size: 20px;
+}
+</style>

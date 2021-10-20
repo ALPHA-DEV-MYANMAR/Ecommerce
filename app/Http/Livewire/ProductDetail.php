@@ -9,6 +9,7 @@ class ProductDetail extends Component
 {
     public $product;
 
+    //Show Single Product
     public function mount($id){
 
         $this->product = Product::find($id);

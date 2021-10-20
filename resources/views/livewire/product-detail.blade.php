@@ -12,7 +12,7 @@
                     <h5>Price:{{ $product->price }}$</h5>
                     <p>Category:{{ $product->category }}</p>
                     <p>{{ $product->description }}</p>
-                    <a href="" type="button" class="btn btn-dark">Add to Cart</a>
+                    <a href="/addtocart/{{ $product->id }}" type="button" class="btn btn-dark">Add to Cart</a>
                     <a href="" type="button" class="btn btn-success">Buy Now</a>
                 </div>
             </div>
