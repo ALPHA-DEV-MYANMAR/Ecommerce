@@ -22,7 +22,7 @@
                                 @foreach ($buydetail as $detail)
                                 <tr>
                                     <th>
-                                        <img src="{{ $detail->p_img }}" style="margin-left:20px" width="50" height="50">
+                                        <img src="{{ asset('storage/'.$detail->p_img) }}" style="margin-left:20px" width="50" height="50">
                                     </th>
                                     <td>{{ $detail->p_name }}</td>
                                     <td>{{ $detail->p_price }}$</td>

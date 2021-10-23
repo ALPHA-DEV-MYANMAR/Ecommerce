@@ -5,7 +5,7 @@
         <div class="card">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ $item->p_img }}" alt="" class="item_img">
+                    <img src="{{ asset('storage/'.$item->p_img) }}" alt="" class="item_img">
                 </div>
                 <div class="col-md-4">
                     <div class="item_text">

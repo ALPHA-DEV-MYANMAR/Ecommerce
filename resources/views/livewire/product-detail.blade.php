@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <a href="/" id='back' type="button" class="btn btn-sm btn-danger"><-Back</a>
-                <img class="image" src="{{ $product->gallery }}" alt="">
+                <img class="image" src="{{ asset('storage/'.$product->gallery) }}" alt="">
             </div>
             <div class="col-sm-6">
                 <div class="text">
