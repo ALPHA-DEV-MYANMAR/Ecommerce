@@ -14,7 +14,7 @@
                             </div> --}}
             
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
                                 <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                                     {{ __('Ecommerce') }}
                                 </x-jet-nav-link>
@@ -27,6 +27,16 @@
                                         </div>
                                     </span>
                                 </x-jet-nav-link>
+
+                                <x-jet-nav-link href="{{ route('buydetail') }}">
+                                    <i class="fas fa-bell" id="ball_icon"></i>
+                                    <span class="badge bg-danger rounded-circle">
+                                        <div>
+                                            <livewire:ball-count />
+                                        </div>
+                                    </span>
+                                </x-jet-nav-link>
+
                             </div>
                         </div>
             
@@ -48,6 +58,7 @@
                                         </x-slot>
             
                                         <x-slot name="content">
+
 
                                             <div class="w-60">
                                                 <!-- Team Management -->
@@ -235,5 +246,8 @@
 <style>
     #cart_icon{
     font-size: 20px;
-}
+    }
+    #ball_icon{
+    font-size: 20px;
+    }
 </style>

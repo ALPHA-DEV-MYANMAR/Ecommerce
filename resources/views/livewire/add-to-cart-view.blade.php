@@ -18,15 +18,13 @@
                     </div>
                 </div>
                 <div class="col-md-4" id="item_btn">
-                    <button  class="btn btn-warning btn-sm text-white" wire:click.prevent="buy({{ $item->id }})">
+                    <a href="/buy/{{ $item->id }}" type="button" class="btn btn-warning btn-sm">
                         Buy now
-                        <i class="fas fa-shopping-cart"></i>
-                    </button>
+                    </a>
 
-                    <button  class="btn btn-danger btn-sm text-white">
-                        Remove
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
+                    <a href="/remove/{{ $item->id }}" type="button" class="btn btn-danger btn-sm">
+                        Remove now
+                    </a>
 
                 </div>
             </div>
