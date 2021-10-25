@@ -39,7 +39,51 @@
         <main>
             {{ $slot }}
         </main>
+    </div>
 
+    <div class="container-fluid">
+        <div class="row text-white bg-dark">
+            <div class="col-md-4">
+                <h1>ABOUT THIS WEBSITE</h1>
+                <p>
+                    Hello everyone!This is my first ecommerce website.
+                    You can register,login and create product and other function.
+                    There have a some little error while creating a product in profile.
+                    In this issue,you need to reload this website.That solution is better.
+                    Thank you for checking my website.Please comment.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h1>CONTENT INFO</h1>
+                <div>
+                    <i class="fas fa-phone-square-alt"></i>
+                    09960187283
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    alpha.dev.myanmar@gmail.com
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h1>FOLLOW ME ON</h1>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="https://www.facebook.com/aung.p.soe.5437/" target="_blank">
+                                <i id="fb" class="fab fa-facebook"> </i></a>
+                            </td>
+                            <td>
+                                <i id="in" class="fab fa-instagram-square"></i>
+                            </td>
+                            <td>
+                                <i id="tw" class="fab fa-twitter-square"></i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- @stack('modals') --}}
@@ -54,3 +98,20 @@
 </body>
 
 </html>
+
+<style>
+    h1 {
+        font-size: 20px;
+    }
+
+    .col-md-4 {
+        padding: 20px;
+    }
+
+    #fb,
+    #in,
+    #tw {
+        font-size: 30px;
+        margin: 10px
+    }
+</style>

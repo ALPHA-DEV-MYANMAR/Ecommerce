@@ -83,7 +83,7 @@
                             <br>
                             <span>${{ $product->price }}</span>
                             <br>
-                            <a href="/product_detail/{{ $product->id }}" target="_blank" class="btn text-white btn-info btn-sm"
+                            <a href="/product_detail/{{ $product->id }}"  class="btn text-white btn-info btn-sm"
                                 type="button">show more</a>
                         </div>
                     </div>
