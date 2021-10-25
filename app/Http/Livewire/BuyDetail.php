@@ -7,10 +7,15 @@ use Livewire\Component;
 
 class BuyDetail extends Component
 {
+
+    protected $listeners = ['remove'];
     public $buydetail;
+    
+
     public function mount(){
         $this->buydetail = Buying::all();
     }
+
 
     public function render()
     {

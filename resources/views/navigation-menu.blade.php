@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100 fixed-top">
@@ -6,17 +6,15 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
                         <div class="flex">
-                            <!-- Logo -->
-                            {{-- <div class="flex-shrink-0 flex items-center">
-                                <a href="{{ route('dashboard') }}">
-                                    <x-jet-application-mark class="block h-9 w-auto" />
-                                </a>
-                            </div> --}}
-            
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
-                                <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                                    {{ __('Ecommerce') }}
+                                <x-jet-nav-link class="ecommerce" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                                    <i class="fab fa-shopify" style="font-size: 20px;color:blue">
+                                        {{ __('Ecommerce') }}
+                                    </i>
+                                </x-jet-nav-link>
+                                <x-jet-nav-link class="home" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                                    <i style="font-size: 20px; color:gray;" class="fas fa-home"></i>
                                 </x-jet-nav-link>
                                 <x-jet-nav-link href="{{ route('addtocartview') }}" :active="request()->routeIs('addtocartview')">
                                     
@@ -36,10 +34,10 @@
                                         </div>
                                     </span>
                                 </x-jet-nav-link>
-
+                                
                             </div>
                         </div>
-            
+
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
                             <!-- Teams Dropdown -->
                             @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
@@ -249,5 +247,13 @@
     }
     #ball_icon{
     font-size: 20px;
+    }
+    .search{
+    margin-top: 15px;
+    }
+    .ecommerce{
+    text-decoration: none;
+    font-size: 15px;
+    font-style: italic
     }
 </style>

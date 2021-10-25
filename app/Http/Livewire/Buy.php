@@ -11,6 +11,8 @@ use Livewire\Component;
 class Buy extends Component
 {
 
+    public $count = '1';
+
     public function mount($id){
         $buy = Cart::find($id);
         //Upload to Buying table

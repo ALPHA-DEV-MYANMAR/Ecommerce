@@ -78,12 +78,12 @@
                 @foreach ($products as $product)
                     <div class="card">
                         <div>
-                            <img style="width: 200px; height:150px;padding:20px" src="{{ 'storage/' . $product->gallery }}" alt="">
+                            <img style="width: 200px; height:150px;padding:20px" src="{{ asset('storage/'.$product->gallery) }}" alt="">
                             <b>{{ $product->name }}</b>
                             <br>
                             <span>${{ $product->price }}</span>
                             <br>
-                            <a href="/product_detail/{{ $product->id }}" target="_blank" class="btn btn-info text-white btn-sm"
+                            <a href="/product_detail/{{ $product->id }}" target="_blank" class="btn text-white btn-info btn-sm"
                                 type="button">show more</a>
                         </div>
                     </div>
@@ -95,3 +95,4 @@
 </body>
 
 </html>
+

@@ -7,7 +7,7 @@
                         <legend>Order list</legend>
                     </div>
                     <div class="card-body">
-                        <table class="table table-striped">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Item Image</th>
@@ -15,6 +15,7 @@
                                     <th scope="col">Item Price</th>
                                     <th>Item Count</th>
                                     <th scope="col">Order By</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,6 +29,9 @@
                                     <td>{{ $detail->p_price }}$</td>
                                     <td>{{ $detail->p_count }}</td>
                                     <td>{{ $detail->user_name }}</td>
+                                    <td>
+                                        <a href="confirm/{{ $detail->id }}" type="button" class="btn btn-primary btn-sm text-white">confirm</a>
+                                    </td>
                                 </tr>
                                 @endforeach
 
@@ -46,7 +50,7 @@
 
 <style>
     .container {
-        margin-top: 40px;
+        margin-top: 100px;
     }
 
 </style>

@@ -19,7 +19,7 @@ class CreateCartsTable extends Migration
             $table->integer('p_id');
             $table->string('p_name');
             $table->string('p_price');
-            $table->string('p_desc');
+            $table->longText('p_desc');
             $table->string('p_img');
             $table->timestamps();
         });

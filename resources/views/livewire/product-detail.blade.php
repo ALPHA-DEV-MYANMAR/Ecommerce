@@ -19,8 +19,9 @@
                     <h5>Price:{{ $product->price }}$</h5>
                     <p>Category:{{ $product->category }}</p>
                     <p>{{ $product->description }}</p>
-                    <a href="/addtocart/{{ $product->id }}" type="button" class="btn btn-dark">Add to Cart</a>
-                    <a href="" type="button" class="btn btn-success">Buy Now</a>
+                    <a href="/addtocart/{{ $product->id }}" type="button" class="btn btn-dark">Add to Cart
+                        <i class="fas fa-cart-arrow-down"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -30,7 +31,7 @@
 
 <style>
     .container {
-        margin-top: 40px;
+        margin-top: 100px;
     }
     .image{
         width: 250px;

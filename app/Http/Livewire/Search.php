@@ -2,34 +2,24 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
 use Livewire\Component;
 
-class Home extends Component
+class Search extends Component
 {
 
     public $products;
     public $categorys;
 
-
-    public function product_detail($id){
-
-        // $details = Product::find($id);
-        
-        $this->emit('detail',$id);
-
-    }
-
-    public function mount(){
-        $this->products = Product::latest()->get();
+    public function mount($name){
+        $this->products = Product::where('category',$name)->latest()->get();
         $this->categorys = Category::latest()->get();
     }
 
     public function render()
     {
-        return view('livewire.home',[
+        return view('livewire.search',[
             'products' => $this->products,
             'categorys' => $this->categorys
         ]);

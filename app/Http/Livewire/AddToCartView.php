@@ -14,8 +14,10 @@ class AddToCartView extends Component
     public $buying_items;
 
     public function mount(){
+        //Cart List Show
         $user_id = Auth::id();
-        $this->cart_items = Cart::where('user_id',$user_id)->get();
+        $this->cart_items = Cart::where('user_id',$user_id)->latest()->get();
+        
     }
 
 
